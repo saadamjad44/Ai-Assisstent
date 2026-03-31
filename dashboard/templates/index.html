@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAZA | Professional AI Employee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-dark: #0a0a0f;
+            --card-bg: rgba(18, 18, 24, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --primary: #818cf8;
+            --primary-glow: rgba(129, 140, 248, 0.2);
+            --accent: #c084fc;
+            --success: #34d399;
+            --danger: #f87171;
+            --warning: #fbbf24;
+            --text-main: #f8fafc;
+            --text-secondary: #94a3b8;
+            --font-main: 'Outfit', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-main);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+        }
+
+        /* Animated Background Gradients */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 10% 10%, rgba(129, 140, 248, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 90%, rgba(192, 132, 252, 0.08) 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 260px;
+            background: rgba(13, 13, 18, 0.95);
+            backdrop-filter: blur(20px);
+            border-right: 1px solid var(--glass-border);
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            z-index: 50;
+        }
+
+        .brand {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #fff, var(--primary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-item {
+            padding: 12px 16px;
+            margin-bottom: 8px;
+            border-radius: 12px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 500;
+            border: 1px solid transparent;
+        }
+
+        .nav-item:hover {
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--text-main);
+            border-color: var(--glass-border);
+        }
+
+        .nav-item.active {
+            background: var(--primary-glow);
+            color: var(--primary);
+            border-color: rgba(129, 140, 248, 0.3);
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 2rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .header-title h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .header-title p {
+            margin: 5px 0 0;
+            color: var(--text-secondary);
+        }
+
+        /* Grid */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .col-4 {
+            grid-column: span 4;
+        }
+
+        .col-6 {
+            grid-column: span 6;
+        }
+
+        .col-8 {
+            grid-column: span 8;
+        }
+
+        .col-12 {
+            grid-column: span 12;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.25rem;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Watcher List */
+        .status-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .status-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 14px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 12px;
+            border: 1px solid transparent;
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .dot.online {
+            background: var(--success);
+            box-shadow: 0 0 10px var(--success);
+        }
+
+        .dot.offline {
+            background: #475569;
+        }
+
+        /* Approval List */
+        .approval-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .approval-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .approval-info h4 {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .approval-info p {
+            margin: 4px 0 0;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-success {
+            background: rgba(52, 211, 153, 0.15);
+            color: var(--success);
+            border: 1px solid rgba(52, 211, 153, 0.3);
+        }
+
+        .btn-danger {
+            background: rgba(248, 113, 113, 0.15);
+            color: var(--danger);
+            border: 1px solid rgba(248, 113, 113, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.2);
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .modal {
+            background: #16161e;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 24px;
+            border: 1px solid var(--glass-border);
+            display: flex;
+            flex-direction: column;
+            max-height: 80vh;
+        }
+
+        .modal-body {
+            padding: 2rem;
+            overflow-y: auto;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            background: #0d0d12;
+            margin: 1.5rem;
+            border-radius: 12px;
+            white-space: pre-wrap;
+            color: #94a3b8;
+        }
+
+        /* Terminal style */
+        .terminal {
+            background: #0d0d11;
+            border-radius: 16px;
+            padding: 1.25rem;
+            height: 350px;
+            overflow-y: auto;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: #cbd5e1;
+            border: 1px solid var(--glass-border);
+        }
+
+        .log-line {
+            margin-bottom: 8px;
+            border-left: 2px solid var(--primary);
+            padding-left: 10px;
+        }
+
+        .log-time {
+            color: var(--primary);
+            opacity: 0.7;
+            font-size: 0.75rem;
+            margin-bottom: 2px;
+            display: block;
+        }
+
+        /* Stats */
+        .stats-row {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            padding: 1.25rem;
+            text-align: center;
+        }
+
+        .stat-val {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stat-lbl {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+        /* DropZone */
+        .drop-zone {
+            height: 100%;
+            min-height: 250px;
+            border: 2px dashed var(--glass-border);
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .drop-zone:hover {
+            border-color: var(--primary);
+            background: rgba(129, 140, 248, 0.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-gradient"></div>
+
+    <aside class="sidebar">
+        <div class="brand">
+            <i class="fa-solid fa-bolt-lightning"></i> <span>SAZA AI</span>
+        </div>
+        <nav>
+            <div class="nav-item active" onclick="switchTab('dashboard')" id="nav-dashboard">
+                <i class="fa-solid fa-chart-pie"></i> <span>Dashboard</span>
+            </div>
+            <div class="nav-item" onclick="switchTab('approvals')" id="nav-approvals">
+                <i class="fa-solid fa-stamp"></i> <span>Approvals</span>
+            </div>
+            <div class="nav-item" onclick="switchTab('projects')" id="nav-projects">
+                <i class="fa-solid fa-layer-group"></i> <span>Results</span>
+            </div>
+        </nav>
+
+        <div style="margin-top: auto; padding: 1rem; background: rgba(255,255,255,0.02); border-radius:12px;">
+            <div style="font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase;">Node status</div>
+            <div style="margin-top: 8px; font-weight: 600; font-size: 0.9rem;">Authenticated</div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <!-- VIEW: DASHBOARD -->
+        <div id="view-dashboard" class="tab-content">
+            <div class="header">
+                <div class="header-title">
+                    <h1 id="greeting">System Overview</h1>
+                    <p>Real-time monitoring of your autonomous workforce.</p>
+                </div>
+                <div class="stats-row">
+                    <div class="stat-card">
+                        <div class="stat-val" id="stat-today">0</div>
+                        <div class="stat-lbl">Tasks Done</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-val" id="stat-pending">0</div>
+                        <div class="stat-lbl">Queue</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid" style="margin-top: 2rem;">
+                <div class="card col-4">
+                    <div class="card-header">
+                        <div class="card-title"><i class="fa-solid fa-robot"></i> Watchers</div>
+                    </div>
+                    <div class="status-list" id="watcher-list">
+                        <!-- Dynamic -->
+                        <div style="text-align: center; color: var(--text-secondary); padding: 2rem;">Scanning...</div>
+                    </div>
+                </div>
+
+                <div class="card col-8">
+                    <div class="card-header">
+                        <div class="card-title"><i class="fa-solid fa-wave-pulse"></i> Neural Feed</div>
+                    </div>
+                    <div class="terminal" id="log-terminal"></div>
+                </div>
+
+                <div class="card col-12">
+                    <div class="card-header">
+                        <div class="card-title"><i class="fa-solid fa-plus"></i> New Objective</div>
+                    </div>
+                    <div class="drop-zone" id="drop-zone">
+                        <i class="fa-solid fa-cloud-arrow-up"
+                            style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                        <div style="font-weight: 600;">Upload Mission Directives</div>
+                        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">Click or drag
+                            .txt / .md files</div>
+                        <input type="file" id="file-input" hidden>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIEW: APPROVALS -->
+        <div id="view-approvals" class="tab-content" style="display:none;">
+            <div class="header">
+                <div class="header-title">
+                    <h1>Authorization Center</h1>
+                    <p>Tasks requiring human oversight before execution.</p>
+                </div>
+            </div>
+
+            <div class="card col-12" style="margin-top: 2rem;">
+                <div class="approval-list" id="approval-list">
+                    <!-- Dynamic -->
+                    <div style="text-align: center; color: var(--text-secondary); padding: 4rem;">
+                        <i class="fa-solid fa-circle-check"
+                            style="font-size: 3rem; opacity: 0.1; display: block; margin-bottom: 1rem;"></i>
+                        All systems clear. No pending approvals.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIEW: PROJECTS (RESULTS) -->
+        <div id="view-projects" class="tab-content" style="display:none;">
+            <div class="header">
+                <div class="header-title">
+                    <h1>Output Archive</h1>
+                    <p>Collection of completed projects and documents.</p>
+                </div>
+            </div>
+
+            <div id="project-grid"
+                style="display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                <!-- Dynamic -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal for Approval Preview -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal">
+            <div
+                style="padding: 1.5rem 2rem; border-bottom: 1px solid var(--glass-border); display: flex; justify-content: space-between; align-items: center;">
+                <h2 id="modal-title" style="margin:0; font-size: 1.25rem;">Action Proposal</h2>
+                <i class="fa-solid fa-xmark" style="cursor:pointer;" onclick="closeModal()"></i>
+            </div>
+            <div class="modal-body" id="modal-content"></div>
+            <div
+                style="padding: 1.5rem 2rem; border-top: 1px solid var(--glass-border); display: flex; justify-content: flex-end; gap: 1rem;">
+                <button class="btn btn-danger" id="modal-reject-btn">Reject</button>
+                <button class="btn btn-primary" id="modal-approve-btn">Approve Task</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab Logic
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+            document.getElementById('view-' + tabId).style.display = 'block';
+            document.getElementById('nav-' + tabId).classList.add('active');
+
+            if (tabId === 'approvals') fetchApprovals();
+            if (tabId === 'projects') fetchProjects();
+        }
+
+        // Fetch Stats
+        function fetchStats() {
+            fetch('/api/stats')
+                .then(r => r.json())
+                .then(d => {
+                    document.getElementById('stat-today').innerText = d.today_projects;
+                    document.getElementById('stat-pending').innerText = d.in_progress;
+                });
+        }
+
+        // Fetch Watchers
+        function fetchWatchers() {
+            fetch('/api/watchers')
+                .then(r => r.json())
+                .then(data => {
+                    const list = document.getElementById('watcher-list');
+                    list.innerHTML = Object.entries(data).map(([name, status]) => `
+                        <div class="status-row">
+                            <span>${name}</span>
+                            <div class="status-indicator">
+                                <div class="dot ${status ? 'online' : 'offline'}"></div>
+                                <span style="color:${status ? 'var(--success)' : 'inherit'}">${status ? 'Active' : 'Offline'}</span>
+                            </div>
+                        </div>
+                    `).join('');
+                });
+        }
+
+        // Fetch Logs
+        function fetchLogs() {
+            fetch('/api/logs')
+                .then(r => r.json())
+                .then(d => {
+                    if (!d.log) return;
+                    const term = document.getElementById('log-terminal');
+                    term.innerHTML = d.log.split('\n').filter(l => l.trim()).map(line => {
+                        const timeMatch = line.match(/\*\*(.*?)\*\*/);
+                        const time = timeMatch ? timeMatch[1] : '';
+                        const msg = line.replace(/^\- \*\*.*?\*\*:/, '').trim() || line;
+                        return `<div class="log-line"><span class="log-time">${time}</span>${msg}</div>`;
+                    }).join('');
+                    term.scrollTop = term.scrollHeight;
+                });
+        }
+
+        // Fetch Approvals
+        function fetchApprovals() {
+            fetch('/api/approvals')
+                .then(r => r.json())
+                .then(data => {
+                    const list = document.getElementById('approval-list');
+                    if (data.length === 0) {
+                        list.innerHTML = `<div style="text-align: center; color: var(--text-secondary); padding: 4rem;">
+                            <i class="fa-solid fa-circle-check" style="font-size: 3rem; opacity: 0.1; display: block; margin-bottom: 1rem;"></i>
+                            All systems clear. No pending approvals.
+                        </div>`;
+                        return;
+                    }
+                    list.innerHTML = data.map(app => `
+                        <div class="approval-item">
+                            <div class="approval-info">
+                                <h4>${app.display_name}</h4>
+                                <p>Detected ${new Date(app.mtime * 1000).toLocaleString()}</p>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" onclick="openProposal('${app.path}', '${app.display_name}')">
+                                    <i class="fa-solid fa-eye"></i> Review
+                                </button>
+                                <button class="btn btn-success" onclick="processTask('${app.path}', 'approve')">
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
+                            </div>
+                        </div>
+                    `).join('');
+                });
+        }
+
+        // Modal Logic
+        let currentProposalPath = '';
+        function openProposal(path, title) {
+            currentProposalPath = path;
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-content').innerText = "Loading proposal...";
+            document.getElementById('modal-overlay').style.display = 'flex';
+
+            fetch('/api/approvals/content/' + path)
+                .then(r => r.json())
+                .then(data => {
+                    document.getElementById('modal-content').innerText = data.content;
+                });
+
+            document.getElementById('modal-approve-btn').onclick = () => processTask(path, 'approve');
+            document.getElementById('modal-reject-btn').onclick = () => processTask(path, 'reject');
+        }
+
+        function closeModal() { document.getElementById('modal-overlay').style.display = 'none'; }
+
+        function processTask(path, action) {
+            fetch('/api/approvals/process', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ path, action })
+            }).then(r => r.json()).then(data => {
+                closeModal();
+                fetchApprovals();
+                fetchStats();
+            });
+        }
+
+        // Fetch Projects
+        function fetchProjects() {
+            fetch('/api/projects')
+                .then(r => r.json())
+                .then(data => {
+                    const grid = document.getElementById('project-grid');
+                    grid.innerHTML = data.map(p => `
+                        <div class="card" style="padding:1.25rem;">
+                            <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem;">
+                                <i class="fa-solid fa-file-code"></i>
+                            </div>
+                            <h3 style="margin:0; font-size:1.15rem;">${p}</h3>
+                            <a href="/projects/${p}/" target="_blank" class="btn btn-primary" style="margin-top:1.5rem; width:fit-content; text-decoration:none;">
+                                View Output <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem;"></i>
+                            </a>
+                        </div>
+                    `).join('');
+                });
+        }
+
+        // Upload Helper
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('file-input');
+        dropZone.onclick = () => fileInput.click();
+        fileInput.onchange = (e) => {
+            const file = e.target.files[0];
+            const formData = new FormData();
+            formData.append('file', file);
+            fetch('/api/upload', { method: 'POST', body: formData })
+                .then(r => r.json())
+                .then(() => fetchStats());
+        };
+
+        // Loops
+        setInterval(fetchStats, 5000);
+        setInterval(fetchWatchers, 5000);
+        setInterval(fetchLogs, 2000);
+
+        fetchStats();
+        fetchWatchers();
+        fetchLogs();
+    </script>
+</body>
+
+</html>

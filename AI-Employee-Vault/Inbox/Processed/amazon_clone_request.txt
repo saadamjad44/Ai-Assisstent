@@ -1,0 +1,32 @@
+Type: Website Request
+Project Name: Amazon_Pro_Clone
+---
+
+Goal: Build a high-performance, modern e-commerce landing page inspired by Amazon.
+
+Core Requirements:
+1. **Dynamic Header**:
+   - Navigation bar with a logo placeholder (SAZA Store).
+   - Functional-looking Search bar with a search icon.
+   - Account & Lists, Orders, and a Cart icon with a notification badge.
+2. **Sub-Navigation**:
+   - Links for "All", "Today's Deals", "Customer Service", "Gift Cards", "Registry", and "Sell".
+3. **Hero Section**:
+   - A large, high-impact background banner (use a gradient or a placeholder image).
+   - A call to action (CTA) overlay text: "Unbeatable Deals on Tech & Fashion".
+4. **Product Categories (Grid)**:
+   - Create a 4-column grid of category cards.
+   - Categories: "Electronics", "Home Decor", "Health & Personal Care", "Fashion".
+   - Each card should have a "Shop now" link.
+5. **Product Highlights**:
+   - A row of 5-6 products with thumbnails (use placeholders).
+   - Each product needs: Title, Rating (Stars), and Price.
+6. **Footer**:
+   - Multi-column layout: "Get to Know Us", "Make Money with Us", "Amazon Payment Products", "Let Us Help You".
+   - Bottom bar with "SAZA Store" logo and language/currency settings.
+
+Technical Specifications:
+- **Responsive**: Must look great on Mobile, Tablet, and Desktop.
+- **Styling**: Use a clean, professional look with plenty of white space. Primary colors: #131921 (Header) and #febd69 (Buttons).
+- **Structure**: Modular HTML/CSS/JS. Keep them separate.
+- **Interactivity**: Add hover effects on product cards and buttons.

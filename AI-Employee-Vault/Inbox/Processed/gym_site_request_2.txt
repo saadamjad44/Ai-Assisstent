@@ -1,0 +1,21 @@
+Type: Website Request
+Project Name: Zenith_Fitness_Gym
+---
+
+I need a high-energy landing page for "Zenith Fitness".
+
+Requirements:
+1. **Hero Section**: Dynamic background (dark theme), bold text "Transform Your Body, Transform Your Life", and a "Join Today" CTA button (Neon Green accent).
+2. **Programs**: Grid showing 3 classes:
+   - "HIIT Blast" (High intensity)
+   - "Yoga Flow" (Mind & Body)
+   - "Power Lifting" (Strength)
+3. **Trainers**: Section featuring 3 circular profile pictures of trainers with names.
+4. **Membership**: Simple pricing card: "$49/month - No Contracts".
+5. **Footer**: Address, Phone, Instagram link.
+
+Design Style:
+- Dark Mode (Black/Dark Grey background).
+- Accents: Neon Green or Electric Blue.
+- Font: Strong, bold Sans-Serif (like Montserrat or Oswald).
+- Mobile Responsive: Essential.

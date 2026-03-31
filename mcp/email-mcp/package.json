@@ -1,0 +1,23 @@
+{
+    "name": "email-mcp",
+    "version": "1.0.0",
+    "description": "MCP Server for Gmail email actions - send, draft, read emails",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "node index.js",
+        "test": "node --test"
+    },
+    "dependencies": {
+        "@anthropic/mcp-sdk": "^0.1.0",
+        "googleapis": "^140.0.0",
+        "dotenv": "^16.4.0"
+    },
+    "keywords": [
+        "mcp",
+        "email",
+        "gmail",
+        "ai-employee"
+    ],
+    "author": "SAZA AI Employee"
+}

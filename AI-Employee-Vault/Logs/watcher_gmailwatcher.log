@@ -1,0 +1,133 @@
+2026-02-05 19:58:36,076 - google_auth_oauthlib.flow - INFO - "GET /?error=access_denied&state=zwAd3krMbNm4v4zwy9CU3PcijyEljO HTTP/1.1" 200 65
+2026-02-05 19:59:23,636 - google_auth_oauthlib.flow - INFO - "GET /?state=RaBQ9LOKOAvHA1Elx2Iy6UOXANh3yC&code=4/0ASc3gC0HiEoCVam23tgWK2tGieJrPIqgDpUTs_KWq2UCXw-L40tFi1uzo0DOC9AzDL9o_w&scope=https://www.googleapis.com/auth/gmail.readonly HTTP/1.1" 200 65
+2026-02-05 19:59:25,202 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-05 19:59:25,213 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-05 19:59:39,033 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-05 19:59:39,035 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-05 20:03:28,599 - GmailWatcher - ERROR - Error: [WinError 10053] An established connection was aborted by the software in your host machine
+2026-02-05 20:05:28,612 - GmailWatcher - ERROR - Error: [WinError 10053] An established connection was aborted by the software in your host machine
+2026-02-05 20:05:43,461 - GmailWatcher - ERROR - Error: [WinError 10053] An established connection was aborted by the software in your host machine
+2026-02-05 20:08:05,165 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-05 20:08:05,168 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-05 20:10:45,143 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-05 20:10:45,145 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-05 20:12:51,986 - GmailWatcher - INFO - Created action file: EMAIL_19c2e5c667c032b3_create a modern portfolio webs.md
+2026-02-05 20:19:09,910 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-05 20:19:09,913 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-05 20:19:12,522 - GmailWatcher - INFO - Created action file: EMAIL_19c2e5c667c032b3_create a modern portfolio webs.md
+2026-02-05 20:23:25,390 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-05 20:23:25,393 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-05 20:23:30,543 - GmailWatcher - INFO - Created action file: EMAIL_19c2e5c667c032b3_create a modern portfolio webs.md
+2026-02-07 06:54:04,083 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-07 06:54:04,091 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-07 06:54:06,303 - GmailWatcher - INFO - Created action file: EMAIL_19c2e5c667c032b3_create a modern portfolio webs.md
+2026-02-07 07:09:18,507 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-07 07:09:18,510 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-07 07:09:20,233 - GmailWatcher - INFO - Created action file: EMAIL_19c2e5c667c032b3_create a modern portfolio webs.md
+2026-02-07 11:37:01,279 - google_auth_oauthlib.flow - INFO - "GET /?state=R2KgaOcgMoYJeBJ2aHq7Ld6vDEGSIy&code=4/0ASc3gC2V0wOCyF3wuGW3VWiW1OtBL_pHmOCEkvTP8uRKOaAmGIVVAJznpgXGE7twZYa9cw&scope=https://www.googleapis.com/auth/gmail.modify HTTP/1.1" 200 65
+2026-02-07 11:37:03,123 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-07 11:37:03,133 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-07 11:37:06,045 - GmailWatcher - INFO - Marked message 19c2e5c667c032b3 as read.
+2026-02-07 11:37:06,046 - GmailWatcher - INFO - Created action file: EMAIL_19c2e5c667c032b3_create a modern portfolio webs.md
+2026-02-07 11:56:44,320 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-07 11:56:44,323 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-07 12:00:07,886 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-07 12:00:07,889 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-07 12:04:09,922 - GmailWatcher - INFO - Created action file: EMAIL_19c36ea385a63ead_create a best ecommerce websit.md
+2026-02-07 12:04:10,288 - GmailWatcher - INFO - Marked message 19c36ea385a63ead as read and ARCHIVED.
+2026-02-07 12:04:10,288 - GmailWatcher - INFO - Created action file: EMAIL_19c36ea385a63ead_create a best ecommerce websit.md
+2026-02-07 12:09:46,124 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-07 12:09:46,127 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-07 12:12:20,545 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-07 12:12:20,549 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-07 12:14:22,402 - GmailWatcher - INFO - Created action file: EMAIL_19c36f33956db92f_create a best and goodlooking .md
+2026-02-07 12:14:22,807 - GmailWatcher - INFO - Marked message 19c36f33956db92f as read.
+2026-02-07 12:14:22,807 - GmailWatcher - INFO - Created action file: EMAIL_19c36f33956db92f_create a best and goodlooking .md
+2026-02-07 12:15:05,488 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-07 12:15:05,491 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-07 15:03:57,160 - GmailWatcher - ERROR - Error: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-02-07 15:46:56,190 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-07 15:46:56,196 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-07 15:50:09,246 - GmailWatcher - INFO - Created action file: EMAIL_19c37b8ab4bcce83_create a best ecomerce website.md
+2026-02-07 15:50:09,650 - GmailWatcher - INFO - Marked message 19c37b8ab4bcce83 as read and ARCHIVED.
+2026-02-07 15:50:09,651 - GmailWatcher - INFO - Created action file: EMAIL_19c37b8ab4bcce83_create a best ecomerce website.md
+2026-02-07 19:04:12,948 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-07 19:04:12,959 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-07 19:04:15,100 - GmailWatcher - INFO - Created action file: EMAIL_19c380afffd12449_Get started with Google Antigr.md
+2026-02-07 19:04:15,509 - GmailWatcher - INFO - Marked message 19c380afffd12449 as read.
+2026-02-07 19:04:15,509 - GmailWatcher - INFO - Created action file: EMAIL_19c380afffd12449_Get started with Google Antigr.md
+2026-02-07 19:09:00,988 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-07 19:09:00,991 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-07 19:12:06,797 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-07 19:12:06,800 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-07 19:14:01,289 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-07 19:14:01,292 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-07 19:16:41,684 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-07 19:16:41,687 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-07 19:45:48,845 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-07 19:45:48,849 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-08 18:50:17,990 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-08 18:50:18,000 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-08 18:54:29,785 - GmailWatcher - INFO - Created action file: EMAIL_19c3d867597aa7a7_create a best and good portfol.md
+2026-02-08 18:54:30,508 - GmailWatcher - INFO - Marked message 19c3d867597aa7a7 as read.
+2026-02-08 18:54:30,509 - GmailWatcher - INFO - Created action file: EMAIL_19c3d867597aa7a7_create a best and good portfol.md
+2026-02-10 10:53:45,573 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-10 10:53:45,577 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-10 13:45:58,541 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-10 13:45:58,548 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-10 20:14:57,538 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-10 20:14:57,552 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-10 20:17:20,095 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-10 20:17:20,099 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-10 20:19:22,253 - GmailWatcher - ERROR - Error: [WinError 10053] An established connection was aborted by the software in your host machine
+2026-02-10 20:21:22,261 - GmailWatcher - ERROR - Error: [WinError 10053] An established connection was aborted by the software in your host machine
+2026-02-10 20:23:29,265 - GmailWatcher - INFO - Created action file: EMAIL_19c48252d2c26c53_create a website which is used.md
+2026-02-10 20:23:29,915 - GmailWatcher - INFO - Marked message 19c48252d2c26c53 as read.
+2026-02-10 20:23:29,915 - GmailWatcher - INFO - Created action file: EMAIL_19c48252d2c26c53_create a website which is used.md
+2026-02-10 20:36:50,338 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-10 20:36:50,351 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-10 20:51:54,253 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-10 20:51:54,266 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-10 21:08:52,331 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-10 21:08:52,335 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-11 07:35:10,311 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-11 07:35:10,316 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-11 07:45:45,582 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-11 07:45:45,588 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-11 09:33:47,985 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-11 09:33:47,992 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-11 09:49:26,087 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-11 09:49:26,091 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-11 10:09:17,970 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-11 10:09:17,976 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-11 10:26:09,604 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-11 10:26:09,610 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-11 10:33:42,259 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-11 10:33:42,267 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-11 14:03:31,035 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-11 14:03:31,039 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-11 14:20:16,705 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-11 14:20:16,712 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-11 14:32:57,267 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-11 14:32:57,273 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-11 14:57:30,274 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-11 14:57:30,279 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-11 19:06:43,063 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-11 19:06:43,069 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-11 19:44:55,455 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-11 19:44:55,460 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-11 20:10:19,896 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-11 20:10:19,899 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-12 14:33:42,761 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-12 14:33:42,770 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-12 14:54:02,459 - GmailWatcher - ERROR - Error: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-02-12 15:02:55,283 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-12 15:02:55,290 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-12 15:32:53,268 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-12 15:32:53,274 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-19 13:47:12,896 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-19 13:47:12,915 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-19 14:38:55,647 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-19 14:38:55,652 - GmailWatcher - INFO - Starting GmailWatcher
+2026-02-19 14:59:27,975 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-02-19 14:59:27,980 - GmailWatcher - INFO - Starting GmailWatcher

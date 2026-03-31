@@ -1,0 +1,16 @@
+Type: Website Request
+Project Name: Artisan_Coffee_Landing
+---
+
+I need a modern, premium landing page for "Artisan Coffee Co."
+
+Requirements:
+1. **Hero Section**: Large background image (placeholder), bold headline "Experience the Perfect Brew", and a "Order Now" button.
+2. **About Us**: Brief section explaining we use organic beans.
+3. **Menu Grid**: Display 4 top items (Latte, Espresso, Cold Brew, Pastry) with prices.
+4. **Footer**: Social links and copyright.
+
+Design Style:
+- Use Warm Earthy Tones (Dark Brown, Cream, Gold).
+- Font: Elegant Serif for headings, Clean Sans-Serif for body.
+- Mobile Responsive: Must look good on phone.
